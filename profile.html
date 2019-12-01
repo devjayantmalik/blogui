@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="author" content="Jayant Malik" />
+    <meta name="description" content="A blog theme using bootstrap" />
+    <meta
+      name="keywords"
+      content="bootstrap4, bs4, blog theme, bootstrap themes"
+    />
+    <title>Blogen</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+  </head>
+  <body>
+    <!-- TOP NAV BAR -->
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg py-0">
+      <div class="container">
+        <a href="/src/index.html" class="navbar-brand">Blogen</a>
+        <button
+          class="navbar-toggler"
+          data-toggle="collapse"
+          datat-target="#navItems"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div id="navItems" class="navbar-collapse collapse">
+          <ul class="nav mr-auto">
+            <li class="nav-item"><a href="/" class="nav-link">Dashboard</a></li>
+            <li class="nav-item">
+              <a href="/src/posts.html" class="nav-link">Posts</a>
+            </li>
+            <li class="nav-item">
+              <a href="/src/categories.html" class="nav-link">Categories</a>
+            </li>
+            <li class="nav-item">
+              <a href="/src/users.html" class="nav-link">Users</a>
+            </li>
+          </ul>
+          <ul class="nav ml-auto">
+            <li class="nav-item">
+              <div class="dropdown">
+                <a
+                  class="text-white nav-link dropdown-toggle"
+                  data-toggle="dropdown"
+                  ><i class="fa fa-user mr-2"></i>Welcome, Brad</a
+                >
+                <div class="dropdown-menu">
+                  <ul class="nav">
+                    <a href="/src/profile.html" class="dropdown-item"
+                      ><i class="fa fa-user mr-2"></i>Profile</a
+                    >
+                    <a href="/src/settings.html" class="dropdown-item"
+                      ><i class="fa fa-wrench mr-2"></i>Settings</a
+                    >
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="./login.html" class="nav-link"
+                ><i class="fa fa-sign-out"></i> Logout</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- container ends here -->
+    </nav>
+
+    <header class="bg-primary text-white">
+      <div class="container py-2">
+        <h1><i class="fa fa-user mr-2 text-white"></i> Edit Profile</h1>
+      </div>
+    </header>
+
+    <!-- ADD SECTION -->
+    <section class="container py-3">
+      <div class="row">
+        <div class="col-lg-3">
+          <a href="/src/index.html" class="nav-link text-dark"
+            ><i class="fa fa-arrow-left text-dark mr-2"></i> Back to
+            dashboard</a
+          >
+        </div>
+        <div class="row ml-auto">
+          <div class="col-lg-6">
+            <button
+              class=" btn btn-success btn-block mr-3"
+              data-toggle="modal"
+              data-target="#changePassword"
+            >
+              <i class="fa text-white fa-lock mr-2"></i> Change Password
+            </button>
+          </div>
+          <div class="col-lg-6">
+            <button
+              class="btn btn-danger btn-block mr-3"
+              data-toggle="modal"
+              data-target="#deleteAccount"
+            >
+              <i class="fa fa-close mr-2"></i> Delete Account
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- article section -->
+    <article class="container mt-5 border border-light">
+      <header>
+        <h3>Edit Profile</h3>
+      </header>
+      <div class="row">
+        <main class="col-lg-8">
+          <form>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" class="form-control" />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="text" id="Email" class="form-control" />
+            </div>
+
+            <div class="form-group">
+              <label for="bio">Bio</label>
+              <textarea
+                rows="8"
+                type="text"
+                id="bio"
+                class="form-control"
+              ></textarea>
+            </div>
+          </form>
+        </main>
+        <aside class="col-lg-3">
+          <h3>Your Avatar</h3>
+          <img src="img/useravatar.png" alt="user Avatar" class="img-fluid">
+          <button class="btn btn-primary btn-block mt-4">Edit Image</button>
+          <button class="btn btn-danger btn-block">Delete Image</button>
+        </aside>
+      </div>
+    </article>
+
+    <footer class="py-5 mt-5 bg-dark text-white">
+      <p class="text-center my-auto">Copyright &copy 2019 Blogen</p>
+    </footer>
+
+
+    <!-- ADD USER MODAL -->
+    <article class="modal" id="changePassword">
+        <section class="modal-dialog">
+          <div class="modal-content">
+            <header class="modal-header bg-primary text-white">
+              <h3 class="modal-title">Change Password</h3>
+              <button type="button" class="close" data-dismiss="modal">
+                <i class="fa fa-close text-white"></i>
+              </button>
+            </header>
+            <main class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" id="password" class="form-control" />
+                </div>
+  
+                <div class="form-group">
+                  <label for="confirmPassword">Confirm Password</label>
+                  <input
+                    type="password"
+                    id="confirmPassword"
+                    class="form-control"
+                  />
+                </div>
+              </form>
+            </main>
+  
+            <footer class="modal-footer">
+              <button class="btn btn-secondary" data-dismiss="modal">
+                Close
+              </button>
+              <button class="btn btn-primary" data-dismiss="modal">
+                Save Changes
+              </button>
+            </footer>
+          </div>
+        </section>
+      </article>
+
+
+
+
+    <!-- bootstrap javascript files -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/navbar-fixed.js"></script>
+  </body>
+</html>
